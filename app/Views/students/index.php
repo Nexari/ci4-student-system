@@ -1,4 +1,10 @@
 <h2>Student List</h2>
+
+<form method="get" action="/students/search">
+    <input type="text" name="keyword" placeholder="Search students...">
+    <button type="submit">Search</button>
+</form>
+
 <a href="/students/create">Add Student</a>
 <table border="1">
     <tr>
