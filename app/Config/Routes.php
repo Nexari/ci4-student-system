@@ -13,3 +13,4 @@ $routes->get('/students/edit/(:num)', 'StudentController::edit/$1');
 $routes->post('/students/update/(:num)', 'StudentController::update/$1');
 $routes->get('/students/delete/(:num)', 'StudentController::delete/$1');
 $routes->get('/students/search', 'StudentController::search');
+$routes->resource('api/students', ['controller' => 'Api\StudentApi']);
