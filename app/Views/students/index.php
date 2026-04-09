@@ -1,11 +1,6 @@
 <h2>Student List</h2>
-
-<form method="get" action="/students/search">
-    <input type="text" name="keyword" placeholder="Search students...">
-    <button type="submit">Search</button>
-</form>
-
 <a href="/students/create">Add Student</a>
+
 <table border="1">
     <tr>
         <th>Name</th><th>Email</th><th>Course</th><th>Actions</th>
@@ -22,3 +17,8 @@
     </tr>
     <?php endforeach; ?>
 </table>
+
+<!-- Pagination links -->
+<div>
+    <?= $pager->links() ?>
+</div>
