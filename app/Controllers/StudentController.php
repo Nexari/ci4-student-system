@@ -8,8 +8,9 @@ class StudentController extends BaseController
 {
     public function index()
     {
-        $studentModel = new StudentModel();
-        $data['students'] = $studentModel->findAll();
+        $studentModel = new \App\Models\StudentModel();
+        $data['students'] = $studentModel->paginate(5);
+        $data['pager'] = $studentModel->pager;
 
         return view('students/index', $data);
     }
